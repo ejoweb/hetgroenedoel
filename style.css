@@ -1,0 +1,69 @@
+/**
+Theme Name: Het Groene Doel
+Theme URI: https://github.com/ejoweb/hetgroenedoel/
+Author: Erik Joling
+Author URI: https://www.ejoweb.nl/
+Description: WordPress blokkenthema voor Het Groene Doel Zwolle
+Requires at least: 6.2
+Tested up to: 6.2
+Requires PHP: 8
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hgd
+*/
+
+
+/* -------------------------------- GENERAL -------------------------------- */
+
+/*
+ * Smooth scroll when `to top`-link is clicked
+ */
+html {
+    scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Remove global padding from site container */
+.wp-site-blocks {
+	padding: 0;
+}
+
+
+/* -------------------------------- CONTEXT -------------------------------- */
+
+
+/**
+ * Site header 
+ */
+
+header {}
+
+
+/**
+ * Site main 
+ */
+
+main {}
+
+
+/**
+ * Site footer 
+ */
+
+footer {}
+
+
+/* ------------------------------ BREAKPOINTS ------------------------------- */
+
+/* Breakpoint for tiny screens */
+@media screen and (max-width: 480px) {
+		
+
+}
+
+/* ------------------------------- TEMPLATES -------------------------------- */
