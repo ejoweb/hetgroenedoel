@@ -28,20 +28,88 @@ html {
     }
 }
 
-/* Remove global padding from site container */
-.wp-site-blocks {
-	padding: 0;
+body {
+
 }
 
+/* Remove default padding from heading */
+h1.has-background, 
+h2.has-background, 
+h3.has-background, 
+h4.has-background, 
+h5.has-background, 
+h6.has-background {
+  padding: 0;
+}
+
+/* Cover block */
+.wp-block-cover {
+    overflow: hidden;
+}
+
+.wp-block-cover h1 {
+    margin: 0;
+}
 
 /* -------------------------------- CONTEXT -------------------------------- */
 
+/** 
+ * Site container 
+ */
+
+/**
+ * 1. Remove global padding from site container
+ */
+.wp-site-blocks {
+    max-width: var(--wp--custom--layout--full-size);
+    margin-left: auto;
+    margin-right: auto;
+
+	padding-top: 0;
+    padding-bottom: 0;
+    padding-right: var(--wp--style--root--padding-right);
+    padding-left: var(--wp--style--root--padding-left);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wp-site-blocks > * + * {
+    margin-block-start: 0;
+}
 
 /**
  * Site header 
  */
 
-header {}
+header {
+    position: relative;
+}
+
+/* Logo */
+header .wp-block-site-logo {
+    position: relative;
+    z-index: 99;
+    margin-bottom: -5.5rem;
+    margin-top: -7rem;
+    background-color: var(--wp--preset--color--base);
+    border-radius: 999px;
+    padding: 10rem 1rem 1rem 7rem;
+    width: 450px;
+    height: 450px;
+}
+
+header .wp-block-site-logo img {
+    border-radius: 0;
+}
+
+header .contact--header {
+    color: var(--wp--preset--color--contrast-2);
+    position: absolute;
+    /* right: 0;
+    bottom: 1rem; */
+}
 
 
 /**
@@ -59,6 +127,16 @@ footer {}
 
 
 /* ------------------------------ BREAKPOINTS ------------------------------- */
+
+/* Breakpoint for  */
+@media screen and (min-width: 960px) {
+       
+    header .contact--header {
+        right: 0;
+        bottom: 1rem;
+    } 
+
+}
 
 /* Breakpoint for tiny screens */
 @media screen and (max-width: 480px) {

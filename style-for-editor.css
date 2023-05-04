@@ -8,3 +8,7 @@ experience.
 The goal is to keep this file to a minimum. 
 */
 
+/* Remove global padding from site container */
+.editor-styles-wrapper {
+	padding: 0 !important;
+}
