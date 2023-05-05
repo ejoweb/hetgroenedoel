@@ -6,8 +6,10 @@
  * Block Types: core/template-part/footer
  */
 ?>
-<!-- wp:group {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"contrast","textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-color has-contrast-background-color has-text-color has-background has-link-color"><!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size">© Het Groene Doel</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
+<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"contrast-2"} -->
+<p class="has-text-align-center has-contrast-2-color has-text-color has-link-color"><strong>Contact</strong>    +3160606060  •  <a href="mailto:info@hetgroenedoel.nl">info@hetgroenedoel.nl</a>  •  <em>Zwolle en omgeving</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:spacer {"height":"7vh"} -->
+<div style="height:7vh" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->

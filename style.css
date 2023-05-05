@@ -45,6 +45,8 @@ h6.has-background {
 /* Cover block */
 .wp-block-cover {
     overflow: hidden;
+    padding: var(--wp--style--root--padding-top)
+             var(--wp--style--root--padding-left);
 }
 
 .wp-block-cover h1 {
@@ -89,15 +91,16 @@ header {
 
 /* Logo */
 header .wp-block-site-logo {
-    position: relative;
-    z-index: 99;
-    margin-bottom: -5.5rem;
-    margin-top: -7rem;
     background-color: var(--wp--preset--color--base);
     border-radius: 999px;
-    padding: 10rem 1rem 1rem 7rem;
-    width: 450px;
-    height: 450px;
+    position: relative;
+    z-index: 99;
+
+    margin-bottom: -4rem;
+    margin-top: -5rem;
+    padding: 6rem 2rem 1rem 4rem;
+    width: 280px;
+    height: 280px;
 }
 
 header .wp-block-site-logo img {
@@ -128,6 +131,31 @@ footer {}
 
 /* ------------------------------ BREAKPOINTS ------------------------------- */
 
+/* Breakpoint for tiny screens */
+@media screen and (max-width: 480px) {
+
+    body {
+        --wp--style--root--padding-top: 1.5rem;
+        --wp--style--root--padding-bottom: 1.5rem;
+        --wp--style--root--padding-left: 1.5rem;
+        --wp--style--root--padding-right: 1.5rem;
+    }
+}
+
+/* Breakpoint for  */
+@media screen and (min-width: 600px) {
+       
+    /* Logo */
+    header .wp-block-site-logo {
+        margin-bottom: -5.5rem;
+        margin-top: -7rem;
+        padding: 10rem 1rem 1rem 7rem;
+        width: 450px;
+        height: 450px;
+    }
+
+}
+
 /* Breakpoint for  */
 @media screen and (min-width: 960px) {
        
@@ -135,12 +163,6 @@ footer {}
         right: 0;
         bottom: 1rem;
     } 
-
-}
-
-/* Breakpoint for tiny screens */
-@media screen and (max-width: 480px) {
-		
 
 }
 
