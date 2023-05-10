@@ -10,6 +10,7 @@
 			"link": true,
 			"palette": [
 				{ "name": "Base", 	    "slug": "base", 	  "color": "#FFFFFF" },
+				{ "name": "Base 2",     "slug": "base-2", 	  "color": "#F4F3F0" },
 				{ "name": "Contrast", 	"slug": "contrast",   "color": "#333333" },
 				{ "name": "Contrast 2",	"slug": "contrast-2", "color": "#777777" },
 				{ "name": "Primary", 	"slug": "primary",	  "color": "#2FAC66" }
@@ -63,7 +64,7 @@
 				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1.125rem, 4vw, 1.25rem)" },
 				{ "name": "Large",    "slug": "large",    "size": "1.5rem" },
 				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(1.5rem, 4vw, 2.125rem)" },
-				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(1.75rem, 4vw, 2.875rem)" }
+				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(1.75rem, 4vw, 2.5rem)" }
 			],
 			"customFontSize": false,
             "lineHeight": true,

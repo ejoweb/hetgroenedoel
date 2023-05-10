@@ -114,6 +114,11 @@ header .contact--header {
     bottom: 1rem; */
 }
 
+main .wp-block-cover:first-child + .wp-block-group {
+        padding: var(--wp--style--root--padding-top)
+                 var(--wp--style--root--padding-left);
+    }
+
 
 /**
  * Site main 
@@ -153,6 +158,8 @@ footer {}
         width: 450px;
         height: 450px;
     }
+
+    
 
 }
 
