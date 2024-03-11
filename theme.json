@@ -13,7 +13,11 @@
 				{ "name": "Base 2",     "slug": "base-2", 	  "color": "#F4F3F0" },
 				{ "name": "Contrast", 	"slug": "contrast",   "color": "#333333" },
 				{ "name": "Contrast 2",	"slug": "contrast-2", "color": "#777777" },
-				{ "name": "Primary", 	"slug": "primary",	  "color": "#2FAC66" }
+				{ "name": "Primary", 	"slug": "primary",	  "color": "#2FAD66" },
+				{ "name": "Secondary", 	"slug": "secondary",  "color": "#F2999A" },
+				{ "name": "Tertiary", 	"slug": "tertiary",	  "color": "#4A4D89" },
+				{ "name": "Quartary", 	"slug": "quartary",	  "color": "#B9BDC0" },
+				{ "name": "Quinary", 	"slug": "quinary",	  "color": "#FFCD6A" }
 			],
 			"custom": true,
 			"gradients": [],
