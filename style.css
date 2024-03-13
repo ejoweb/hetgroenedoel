@@ -4,14 +4,32 @@ Theme URI: https://github.com/ejoweb/hetgroenedoel/
 Author: Erik Joling
 Author URI: https://www.ejoweb.nl/
 Description: WordPress blokkenthema voor Het Groene Doel Zwolle
-Requires at least: 6.2
-Tested up to: 6.2
+Requires at least: 6.4
+Tested up to: 6.4
 Requires PHP: 8
 Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: hgd
 */
+
+/**
+ * Common variables
+ * 
+ * var(--wp--style--root--padding-top);
+ * var(--wp--style--root--padding-bottom);
+ * var(--wp--style--root--padding-right);
+ * var(--wp--style--root--padding-left);
+ * 
+ * var(--wp--preset--spacing--50)
+ * 
+ * var(--wp--custom--border-radius--medium)
+ * var(--wp--custom--border-radius--large)
+ * 
+ * var(--wp--preset--color--primary)
+ * var(--wp--preset--color--secondary)
+ */
+
 
 
 /* -------------------------------- GENERAL -------------------------------- */
@@ -39,14 +57,15 @@ h3.has-background,
 h4.has-background, 
 h5.has-background, 
 h6.has-background {
-  padding: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Cover block */
 .wp-block-cover {
-    overflow: hidden;
+/*    overflow: hidden;
     padding: var(--wp--style--root--padding-top)
-             var(--wp--style--root--padding-left);
+             var(--wp--style--root--padding-left);*/
 }
 
 .wp-block-cover h1 {
@@ -59,22 +78,13 @@ h6.has-background {
  * Site container 
  */
 
-/**
- * 1. Remove global padding from site container
- */
 .wp-site-blocks {
-    max-width: var(--wp--custom--layout--full-size);
-    margin-left: auto;
-    margin-right: auto;
-
 	padding-top: 0;
     padding-bottom: 0;
-    padding-right: var(--wp--style--root--padding-right);
-    padding-left: var(--wp--style--root--padding-left);
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh;*/
 }
 
 .wp-site-blocks > * + * {
@@ -87,51 +97,111 @@ h6.has-background {
 
 header {
     position: relative;
+    overflow: hidden;
 }
+
+/* Header bottom size */
+header > .wp-block-group {
+    padding-bottom: calc(var(--wp--preset--spacing--50) * 4);
+}
+
+/* Header top bar */
+header #top-bar {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    padding-right: var(--wp--style--root--padding-right);
+    padding-left: var(--wp--style--root--padding-left);
+}
+
+header #top-bar:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: inline-block;
+    margin-top: -2240px;
+    margin-right: -1080px;
+    border-radius: 1200px;
+    height: 2400px;
+    width: 2400px;
+/*    background: var(--wp--preset--color--secondary);*/
+}
+
 
 /* Logo */
 header .wp-block-site-logo {
-    background-color: var(--wp--preset--color--base);
-    border-radius: 999px;
     position: relative;
     z-index: 99;
+}
 
-    margin-bottom: -4rem;
-    margin-top: -5rem;
-    padding: 6rem 2rem 1rem 4rem;
-    width: 280px;
-    height: 280px;
+header .wp-block-site-logo:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: inline-block;
+    margin-top: -1100px;
+    margin-left: -890px;
+    border-radius: 999px;
+    height: 1200px;
+    width: 1200px;
+    background: var(--wp--preset--color--tertiary);
 }
 
 header .wp-block-site-logo img {
     border-radius: 0;
 }
 
-header .contact--header {
-    color: var(--wp--preset--color--contrast-2);
-    position: absolute;
-    /* right: 0;
-    bottom: 1rem; */
-}
 
-main .wp-block-cover:first-child + .wp-block-group {
-        padding: var(--wp--style--root--padding-top)
-                 var(--wp--style--root--padding-left);
-    }
 
 
 /**
  * Site main 
  */
 
-main {}
+main {
+    position: relative;
+}
+
+/* Overlap banner with header */
+main .wp-block-cover.alignwide:first-child  {
+    margin-block-start: calc(var(--wp--preset--spacing--50) * -4);
+}
+
+main > .entry-content.alignfull {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 
 /**
  * Site footer 
  */
 
-footer {}
+footer {
+    overflow: hidden;
+    position: relative;
+}
+
+footer > .wp-block-group.has-background {
+}
+
+footer > .wp-block-group.has-background:before {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    display: inline-block;
+    bottom: -2000px;
+    right: -1240px;
+    border-radius: 1200px;
+    height: 2400px;
+    width: 2400px;
+    background: var(--wp--preset--color--tertiary);
+}
+
+footer > .wp-block-group.has-background:first-child > * {
+    position: relative;
+}
+
 
 
 /* ------------------------------ BREAKPOINTS ------------------------------- */
@@ -140,10 +210,10 @@ footer {}
 @media screen and (max-width: 480px) {
 
     body {
-        --wp--style--root--padding-top: 1.5rem;
+/*        --wp--style--root--padding-top: 1.5rem;
         --wp--style--root--padding-bottom: 1.5rem;
         --wp--style--root--padding-left: 1.5rem;
-        --wp--style--root--padding-right: 1.5rem;
+        --wp--style--root--padding-right: 1.5rem;*/
     }
 }
 
@@ -152,11 +222,7 @@ footer {}
        
     /* Logo */
     header .wp-block-site-logo {
-        margin-bottom: -5.5rem;
-        margin-top: -7rem;
-        padding: 10rem 1rem 1rem 7rem;
-        width: 450px;
-        height: 450px;
+
     }
 
     
@@ -165,11 +231,6 @@ footer {}
 
 /* Breakpoint for  */
 @media screen and (min-width: 960px) {
-       
-    header .contact--header {
-        right: 0;
-        bottom: 1rem;
-    } 
 
 }
 
