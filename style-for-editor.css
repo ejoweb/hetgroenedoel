@@ -12,3 +12,10 @@ The goal is to keep this file to a minimum.
 .editor-styles-wrapper {
 	padding: 0 !important;
 }
+
+
+/* -------------------------------- CUSTOM ---------------------------------- */
+
+.image-button-2 > .wp-block-image > .components-resizable-box__container {
+    aspect-ratio: 21/9 !important;
+}

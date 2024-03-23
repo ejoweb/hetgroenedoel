@@ -235,3 +235,16 @@ footer > .wp-block-group.has-background:first-child > * {
 }
 
 /* ------------------------------- TEMPLATES -------------------------------- */
+
+
+/* -------------------------------- CUSTOM ---------------------------------- */
+
+.image-button-2 { position: relative; }
+.image-button-2 > .wp-block-image img {
+    aspect-ratio: 21/9 !important;
+}
+.image-button-2 > .wp-block-buttons { 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
