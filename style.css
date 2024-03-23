@@ -182,10 +182,10 @@ footer {
     position: relative;
 }
 
-footer > .wp-block-group.has-background {
+footer > .wp-block-group.has-primary-background-color {
 }
 
-footer > .wp-block-group.has-background:before {
+footer > .wp-block-group.has-primary-background-color:before {
     position: absolute;
     z-index: 0;
     content: '';
@@ -198,7 +198,7 @@ footer > .wp-block-group.has-background:before {
     background: var(--wp--preset--color--tertiary);
 }
 
-footer > .wp-block-group.has-background:first-child > * {
+footer > .wp-block-group.has-primary-background-color > * {
     position: relative;
 }
 
