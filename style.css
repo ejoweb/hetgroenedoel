@@ -248,6 +248,7 @@ footer > .wp-block-group.has-primary-background-color > * {
 
 /* -------------------------------- CUSTOM ---------------------------------- */
 
+/* Image-button */
 .image-button-2 { position: relative; }
 .image-button-2 > .wp-block-image img {
     aspect-ratio: 21/9 !important;
@@ -256,4 +257,14 @@ footer > .wp-block-group.has-primary-background-color > * {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+/* Gallery overlap */
+.wp-block-gallery--overlap {
+
+}
+
+.wp-block-gallery--overlap > figure + figure {
+    margin-left: calc( var(--wp--style--block-gap) * -4 ) !important;
+    opacity: 0.8;
 }
