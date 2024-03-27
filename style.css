@@ -128,7 +128,21 @@ header {
 
 /* Header bottom size */
 header > .wp-block-group {
+    padding-top: var(--wp--preset--spacing--50);
     padding-bottom: calc(var(--wp--preset--spacing--50) * 4);
+}
+
+/* Bulb in header */
+header > .wp-block-group::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: inline-block;
+    margin-top: -2240px;
+    margin-right: -1080px;
+    border-radius: 1200px;
+    height: 2400px;
+    width: 2400px;
 }
 
 /* Header top bar */
@@ -139,20 +153,6 @@ header #top-bar {
     padding-right: var(--wp--style--root--padding-right);
     padding-left: var(--wp--style--root--padding-left);
 }
-
-header #top-bar:before {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    display: inline-block;
-    margin-top: -2240px;
-    margin-right: -1080px;
-    border-radius: 1200px;
-    height: 2400px;
-    width: 2400px;
-/*    background: var(--wp--preset--color--secondary);*/
-}
-
 
 /* Logo */
 header .wp-block-site-logo {
@@ -239,34 +239,31 @@ footer > .wp-block-group.has-primary-background-color > * {
 
 
 
-/* ------------------------------ BREAKPOINTS ------------------------------- */
+/* ------------------------------ RESPONSIVENESS ------------------------------- */
 
-/* Breakpoint for tiny screens */
+/* Only tiny screens */
 @media screen and (max-width: 480px) {
 
     body {
-/*        --wp--style--root--padding-top: 1.5rem;
-        --wp--style--root--padding-bottom: 1.5rem;
-        --wp--style--root--padding-left: 1.5rem;
-        --wp--style--root--padding-right: 1.5rem;*/
+        --wp--style--root--padding-right: var(--wp--preset--spacing--40);
+        --wp--style--root--padding-left: var(--wp--preset--spacing--40);
     }
 }
 
-/* Breakpoint for  */
-@media screen and (min-width: 600px) {
-       
-    /* Logo */
-    header .wp-block-site-logo {
+/* Only medium screens */
+@media screen and (max-width: 960px) {
 
+    /* Header bottom size */
+    header > .wp-block-group {
+        /* padding-top: 0;*/
     }
 
-    
-
-}
-
-/* Breakpoint for  */
-@media screen and (min-width: 960px) {
-
+    /* Header top bar */
+    header #top-bar {
+        position: relative;
+        display: block;
+        display: none;
+    }
 }
 
 
