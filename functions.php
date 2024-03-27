@@ -24,6 +24,31 @@ add_action( 'after_setup_theme', function() {
 	// Enqueue scripts and styles to the editor
 	add_action( 'enqueue_block_editor_assets', 'hgd_add_editor_styles_and_scripts' );
 
+	// Add class to body for featured image
+	add_filter('body_class', function($classes) {
+
+		if (is_singular() && has_post_thumbnail()) {
+	    	$classes[] = 'has-post-thumbnail';
+	    }
+	    else {
+	    	$classes[] = 'has-no-post-thumbnail';	    	
+	    }
+	    return $classes;
+	});
+
+	// Add 'button' class to the submit button for contact form 7
+	add_filter( 'do_shortcode_tag', function($output, $tag, $atts, $m) {
+
+	    if ($tag === 'contact-form-7') {
+	        $output = str_replace(
+	            'wpcf7-submit',
+	            'wpcf7-submit wp-block-button__link',
+	            $output
+	        );
+	    }
+
+	    return $output;
+	}, 10, 4 );
 } );
 
 

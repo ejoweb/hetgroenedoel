@@ -81,7 +81,7 @@ h6.has-background {
     border: 0px !important;
     font-size: var(--wp--preset--font-size--small) !important;
     font-weight: normal !important;
-    padding: 0.375em 0.25em;
+    padding: 0.375em 0.375em;
 }
 
 /* Submenu open */
@@ -191,7 +191,6 @@ main {
 /* Overlap banner with header */
 main .wp-block-cover.alignwide:first-child  {
     margin-block-start: calc(var(--wp--preset--spacing--50) * -4);
-/*    background-color: var(--wp--preset--color--white);*/
 }
 
 main > .entry-content.alignfull {
@@ -270,7 +269,114 @@ footer > .wp-block-group.has-primary-background-color > * {
 
 }
 
+
 /* ------------------------------- TEMPLATES -------------------------------- */
+
+/* Default page without post thumbnail */
+.page-template-default.has-no-post-thumbnail main > .wp-block-cover {
+    color: var(--wp--preset--color--primary) !important;
+    min-height: calc(var(--wp--preset--spacing--50) * 4) !important;
+    padding-bottom: var(--wp--preset--spacing--30) !important;
+}
+
+.page-template-default.has-no-post-thumbnail main > .wp-block-cover .wp-block-cover__background {
+    background: var(--wp--preset--color--base) !important;
+}
+
+
+/* ------------------------------ 3RD PARTY --------------------------------- */
+
+/**
+ * Contact Form 7
+ */
+
+.wpcf7 form {
+    --wp--style--block-gap: var(--wp--preset--spacing--50);
+    color: var(--wp--preset--color--contrast);
+}
+
+.wpcf7 form > *,
+.wpcf7 form fieldset > * {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.wpcf7 form > * + *,
+.wpcf7 form fieldset > * + * {
+    margin-block-start: var( --wp--style--block-gap );
+    margin-block-end: 0;
+}
+
+.wpcf7 form fieldset {
+    --wp--style--block-gap: var(--wp--preset--spacing--40);
+    padding: var(--wp--preset--spacing--50);
+    border-radius: var(--wp--custom--border-radius--small);
+    border: none;
+    background-color: var(--wp--preset--color--contrast-2);
+}
+
+.wpcf7 form fieldset legend {
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--wp--custom--border-radius--small);
+    background-color: var(--wp--preset--color--white);
+}
+
+.wpcf7 form fieldset legend + * {
+    margin-block-start: 0;
+}
+
+.wpcf7 form input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+.wpcf7 form textarea {
+    padding: 0.5rem 0.5rem;
+    font-size: var(--wp--preset--font-size--medium);
+    font-family: var(--wp--preset--font-family--body-font);
+    border-radius: var(--wp--custom--border-radius--small);
+    border: 1px solid var(--wp--preset--color--contrast-2);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.wpcf7 form input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):focus-visible,
+.wpcf7 form textarea:focus-visible {
+    outline: 2px solid var(--wp--preset--color--contrast-2);
+    border-color: var(--wp--preset--color--primary);
+}
+
+/* Reset submit style. Note: we added wp-block-button__link class to the submit button */ 
+.wpcf7 form input[type="submit"].wp-block-button__link {
+
+}
+
+/* Checkboxes and radio */
+.wpcf7 form input[type="checkbox"], 
+.wpcf7 form input[type="radio"] {
+    margin: 0 0.5em 0 0;
+    accent-color: var(--wp--preset--color--primary);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 0.15em;
+    transform: translateY(0.125em);
+}
+
+/* Checkboxes, we don't want them inline  */
+.wpcf7 form .wpcf7-list-item { 
+    display: block; 
+    margin-left: 1.25rem;
+}
+
+.wpcf7 form .wpcf7-list-item:only-child {
+    margin-left: 0;
+}
+
+.wpcf7 form .wpcf7-checkbox {
+    margin-top: 12px;
+    display: block;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 0;
+    padding: var(--wp--preset--spacing--40);
+}
 
 
 /* -------------------------------- CUSTOM ---------------------------------- */
