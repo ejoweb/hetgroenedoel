@@ -72,6 +72,32 @@ h6.has-background {
     margin: 0;
 }
 
+/**
+ * Navigation block 
+ */
+
+/* Submenu */
+.wp-block-navigation .wp-block-navigation__submenu-container {
+    border: 0px !important;
+    font-size: var(--wp--preset--font-size--small) !important;
+    font-weight: normal !important;
+    padding: 0.375em 0.25em;
+}
+
+/* Submenu open */
+.wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
+    min-width: 180px;    
+}
+
+/* Submenu list-item */
+.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item {
+}
+
+/* Submenu link */
+.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+    padding: 0.375em 0.625em;
+}
+
 /* -------------------------------- CONTEXT -------------------------------- */
 
 /** 
@@ -165,6 +191,7 @@ main {
 /* Overlap banner with header */
 main .wp-block-cover.alignwide:first-child  {
     margin-block-start: calc(var(--wp--preset--spacing--50) * -4);
+/*    background-color: var(--wp--preset--color--white);*/
 }
 
 main > .entry-content.alignfull {
