@@ -76,6 +76,16 @@ h6.has-background {
  * Navigation block 
  */
 
+.wp-block-navigation .wp-block-navigation-item > a {
+    text-underline-offset: 3px;    
+    text-decoration-thickness: 2px;
+}
+
+.wp-block-navigation .current-menu-item > a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
 /* Submenu */
 .wp-block-navigation .wp-block-navigation__submenu-container {
     border: 0px !important;
