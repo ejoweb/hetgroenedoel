@@ -194,13 +194,10 @@ header .wp-block-site-logo img {
  * Site main 
  */
 
+/* Overlap main with header */
 main {
     position: relative;
-}
-
-/* Overlap banner with header */
-main .wp-block-cover.alignwide:first-child  {
-    margin-block-start: calc(var(--wp--preset--spacing--50) * -4);
+    margin-block-start: calc(var(--wp--preset--spacing--50) * -4) !important;
 }
 
 main > .entry-content.alignfull {
