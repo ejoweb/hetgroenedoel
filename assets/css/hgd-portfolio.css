@@ -1,0 +1,129 @@
+/**
+ * Portfolio Style
+ */
+.wp-block-group.is-style-hgd-portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* WordPress breakpoint for small screens  */
+@media screen and (min-width: 600px) {
+
+    .wp-block-group.is-style-hgd-portfolio {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* WordPress breakpoint for medium screens */
+@media screen and (min-width: 782px) {
+
+    .wp-block-group.is-style-hgd-portfolio {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-cover {
+    padding: 0;
+    overflow: visible; /* To show the heart-image of the reviews */
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-details {
+    position: relative;
+    overflow: visible;
+    font-style: italic;
+    padding-left: var(--wp--preset--spacing--50) !important;
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-details summary {
+    font-weight: bold;
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-details summary::marker {
+    display: none;
+    content: "";
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-details summary::after {
+  content: ' ▸';
+  font-style: normal;
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-details[open] summary:after {
+  content: " ▾";
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-details summary::before {
+    content: '';
+    display: block;
+    background-image: url('../images/Het Groene Doel_blaadje_blauw2.png');
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -20px;
+    top: -30px;
+    z-index: 99;
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-cover.is-position-bottom-left .wp-block-details,
+.wp-block-group.is-style-hgd-portfolio .wp-block-cover.is-position-top-left .wp-block-details {
+    padding-left: var(--wp--preset--spacing--40) !important;
+    padding-right: var(--wp--preset--spacing--50) !important;
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-cover.is-position-bottom-left .wp-block-details summary::before {
+    background-image: url('../images/Het Groene Doel_blaadje_geel2.png');
+    top: -30px;
+    left: auto;
+    right: -20px;
+    bottom: auto;
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-cover.is-position-top-left .wp-block-details summary::before {
+    background-image: url('../images/Het Groene Doel_blaadje_roze2.png');
+    top: auto;
+    left: auto;
+    right: -20px;
+    bottom: -30px;
+}
+
+.wp-block-group.is-style-hgd-portfolio .wp-block-cover.is-position-top-right .wp-block-details summary::before {
+    background-image: url('../images/Het Groene Doel_blaadje_grijs2.png');
+    top: auto;
+    left: -20px;
+    right: auto;
+    bottom: -30px;
+}
+
+.wp-block-group.is-style-hgd-portfolio p {
+    font-style: italic;
+}
+
+/* ------------------------------ RESPONSIVENESS ------------------------------- */
+
+/* Only tiny screens */
+@media screen and (max-width: 480px) {
+
+    body {
+        --wp--style--root--padding-right: var(--wp--preset--spacing--40);
+        --wp--style--root--padding-left: var(--wp--preset--spacing--40);
+    }
+}
+
+
+
+/* Only medium screens */
+@media screen and (max-width: 960px) {
+
+    /* Header bottom size */
+    header > .wp-block-group {
+        /* padding-top: 0;*/
+    }
+
+    /* Header top bar */
+    header #top-bar {
+        position: relative;
+        display: block;
+        display: none;
+    }
+}
