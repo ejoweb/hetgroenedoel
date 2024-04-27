@@ -86,6 +86,10 @@ h6.has-background {
     text-decoration-thickness: 2px;
 }
 
+.wp-block-navigation .wp-block-navigation__container {
+    row-gap: var(--wp--preset--spacing--30);
+}
+
 /* Submenu */
 .wp-block-navigation .wp-block-navigation__submenu-container {
     border: 0px !important;
@@ -107,6 +111,18 @@ h6.has-background {
 .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
     padding: 0.375em 0.625em;
 }
+
+/* Mobile - toggle */
+.wp-block-navigation__responsive-container-open svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Mobile - container */
+ .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--base);
+ }
 
 /* -------------------------------- CONTEXT -------------------------------- */
 
