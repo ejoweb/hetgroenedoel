@@ -419,4 +419,19 @@ footer > .wp-block-group.has-primary-background-color > * {
         display: block;
         display: none;
     }
+
+
+    /* Header bottom size */
+    header > .wp-block-group {
+        padding-bottom: calc(var(--wp--preset--spacing--50) * 3);
+    }
+
+    main {
+        margin-block-start: calc(var(--wp--preset--spacing--50) * -3) !important;
+    }
+
+    /* Default page without post thumbnail */
+    .page-template-default.has-no-post-thumbnail main > .wp-block-cover {
+        min-height: calc(var(--wp--preset--spacing--50) * 3) !important;
+    }
 }
