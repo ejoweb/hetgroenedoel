@@ -124,6 +124,18 @@ h6.has-background {
     color: var(--wp--preset--color--base);
  }
 
+ /**
+  * Alignment
+  */
+
+.entry-content > .alignleft {
+  margin-left: max(0px, calc((100% - var(--wp--style--global--content-size)) / 2)) !important;
+}
+
+.entry-content > .alignright {
+  margin-right: max(0px, calc((100% - var(--wp--style--global--content-size)) / 2)) !important;
+}
+
 /* -------------------------------- CONTEXT -------------------------------- */
 
 /** 
