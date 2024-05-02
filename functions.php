@@ -21,6 +21,9 @@ add_action( 'after_setup_theme', function() {
 	// // Add support for block styles.
 	// add_theme_support( 'wp-block-styles' );
 
+	// Enqueue editor styles.
+	add_editor_style( ['style.css', 'assets/css/hgd-portfolio.css'] );
+
 	// Add class to body for featured image
 	add_filter('body_class', function($classes) {
 
@@ -89,9 +92,6 @@ function hgd_add_editor_styles_and_scripts() {
 		array(),
 		$theme_version
 	);
-
-	// Enqueue editor styles.
-	add_editor_style( ['style.css', 'assets/css/hgd-portfolio.css'] );
 }
 
 
