@@ -8,9 +8,21 @@ experience.
 The goal is to keep this file to a minimum. 
 */
 
+
+/* ------------------------ CHANGE DEFAULT BEHAVIOR ------------------------- */
+
 /* Remove global padding from site container */
 .editor-styles-wrapper {
 	padding: 0 !important;
+}
+
+/* Left and right alignments (float inside content) */
+.is-root-container > .alignleft {
+    margin-left: max(0px, calc((100% - var(--wp--style--global--content-size)) / 2)) !important;
+}
+
+.is-root-container > .alignright {
+    margin-right: max(0px, calc((100% - var(--wp--style--global--content-size)) / 2)) !important;
 }
 
 
@@ -19,3 +31,4 @@ The goal is to keep this file to a minimum.
 .image-button-2 > .wp-block-image > .components-resizable-box__container {
     aspect-ratio: 21/9 !important;
 }
+
